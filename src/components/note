@@ -1,0 +1,10 @@
+
+// STep One
+// definir state the base EG: events = []
+
+
+axios.get('https://djangoeventsapi.herokuapp.com/api/events')
+.then(function(response){
+  console.log(response)
+  // Step Two réassigner la reponse du fetc à notre state events
+})

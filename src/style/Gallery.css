@@ -1,0 +1,10 @@
+img {
+    padding: 0px 10px
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-around;
+}
