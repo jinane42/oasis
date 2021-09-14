@@ -1,15 +1,19 @@
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom'
+import React, { useState, useEffect, Fragment } from 'react';
 import '../style/Navbar.css'
-import About from './About'
-import Events from './Events'
-import Gallery from './Gallery'
-import Calendar from './Calendar'
 
 function Navbar() {
+
+    const [isAuth, setIsAuth] = useState(false);
+    useEffect(() => {
+        if (localStorage.getItem('token') !== null) {
+            setIsAuth(true);
+        }
+    }, []);
+
     return (
 
-        <div className='container'>
+        <div className='containerNav'>
             <Fragment>
                 <Link to='/About'><p>A propos</p></Link>
                 <Link to='/Calendar'><p>Calendrier</p></Link>
@@ -17,10 +21,13 @@ function Navbar() {
                 <Link to='/Gallery'><p>Gallerie</p></Link>
                 <Link to='/Ressource'><p>Ressource</p></Link>
             </Fragment>
+            {isAuth === true ? (
+                <Fragment>
+                    <Link to='/CreateEvent'><p>Ajouter event</p></Link>
+                </Fragment>
+            ) : (null)}
 
-
-
-        </ div >
+        </div >
     )
 }
 

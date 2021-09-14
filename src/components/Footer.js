@@ -1,6 +1,9 @@
 import '../style/Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
+
+const fb = <FontAwesomeIcon icon={faFacebook} />
+const insta = <FontAwesomeIcon icon={faInstagram} />
 
 function Footer () {
     return(
@@ -15,8 +18,8 @@ function Footer () {
            <div className='socials'>
                <p>Suis-nous sur les réseaux </p>
                <ul>
-                   <li>Facebook</li>
-                   <li>Instagram</li>
+                   <li>{fb}</li>
+                   <li>{insta}</li>
                </ul>
            </div>
 

@@ -1,10 +1,14 @@
-.container{
+.containerNav{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     background-color: rgb(0, 77, 6);
 }
-.container, Link, p, p:link, p:hover, p:active, p:visited{
+.containerNav, Link, p, p:link, p:hover, p:active, p:visited{
     color: white;
     text-decoration: none !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(0, 77, 6);
 }

@@ -1,6 +1,7 @@
+import { useState, useEffect } from 'react' 
 import '../style/Events.css'
 
-function Events() {
+function Events({ event, setEvent}) {
 
     return (
         <div className='container-event'>

@@ -67,3 +67,49 @@ function Call() {
 }
 
 export default Call
+
+
+
+const [username, setUsername] = useState('');
+const [password, setPassword] = useState('');
+const [errors, setErrors] = useState(false);
+const [loading, setLoading] = useState(true);
+
+useEffect(() => {
+    if (localStorage.getItem('token') !== null) {
+        
+    } else {
+        setLoading(false);
+    }
+}, []);
+
+const onSubmit = e => {
+    e.preventDefault();
+
+    const user = {
+        username: username,
+        password: password
+    };
+
+    fetch('https://djangoeventsapi.herokuapp.com/api/auth/token/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data.key)
+            if (data.key) {
+                localStorage.clear();
+                localStorage.setItem('token', data.key);
+                
+            } else {
+                setUsername('');
+                setPassword('');
+                localStorage.clear();
+                setErrors(true);
+            }
+        });
+};

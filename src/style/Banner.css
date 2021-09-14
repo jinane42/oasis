@@ -1,6 +1,57 @@
-.img{
-    width: 75vw;    
+.banner{
+    width: 100vw;   
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
 }
+
 .logo{
     width: 20vw;
 }
+.user{
+    position: absolute;
+    top: 20px;
+    color: black;
+    font-size: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 255, 0) !important;
+}
+
+.login {
+  overflow: hidden;
+  background-color: white;
+  padding: 40px 30px 30px 30px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 400px;
+}  
+  .input{
+    display: block;
+    border-radius: 5px;
+    font-size: 16px;
+    background: white;
+    width: 100%;
+    border: 0;
+    padding: 10px 10px;
+    margin: 15px 10px;
+  }
+  
+  .formButton{
+    cursor: pointer;
+    color: rgb(117, 117, 117);
+    font-size: 16px;
+    text-transform: uppercase;
+    border: 0;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+  }
+
+  .formContainer{
+    display: flex;
+    align-items: center;
+  }

@@ -4,11 +4,11 @@ function Gallery() {
 
     return (
         <div className='gallery'>
-            <img  src='https://picsum.photos/id/1/200/300'></img>
-            <img src='https://picsum.photos/id/1/200/300'></img>
-            <img src='https://picsum.photos/id/1/200/300'></img>
-            <img src='https://picsum.photos/id/1/200/300'></img>
-            <img src='https://picsum.photos/id/1/200/300'></img>
+            <img  alt='img' src='https://picsum.photos/id/1/200/300'></img>
+            <img alt='img' src='https://picsum.photos/id/1/200/300'></img>
+            <img alt='img' src='https://picsum.photos/id/1/200/300'></img>
+            <img alt='img' src='https://picsum.photos/id/1/200/300'></img>
+            <img alt='img' src='https://picsum.photos/id/1/200/300'></img>
         </div>
     )
 }
