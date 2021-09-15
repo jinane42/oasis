@@ -7,12 +7,12 @@ export default function Login({ open, children, onClose }) {
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState(false);
     const [loading, setLoading] = useState(true);
+    const [isAuth, setIsAuth] = useState(false);
 
+    
     useEffect(() => {
         if (localStorage.getItem('auth_token') !== null) {
-
-        } else {
-            setLoading(false);
+            setIsAuth(true);
         }
     }, []);
 
@@ -23,6 +23,7 @@ export default function Login({ open, children, onClose }) {
             username: username,
             password: password
         };
+
 
         fetch('https://djangoeventsapi.herokuapp.com/api/auth/token/login', {
             method: 'POST',
@@ -35,9 +36,10 @@ export default function Login({ open, children, onClose }) {
             .then(data => {
                 console.log(data)
                 if (data) {
-                    localStorage.clear();
                     localStorage.setItem('auth_token', data);
-
+                    setIsAuth(true)
+                    console.log(setIsAuth)
+                    console.log('auth??')
                 } else {
                     setUsername('');
                     setPassword('');
@@ -47,6 +49,22 @@ export default function Login({ open, children, onClose }) {
             });
     };
 
+    const logOut = e => {
+        e.preventDefault();
+    
+        fetch('https://djangoeventsapi.herokuapp.com/api/auth/token/logout', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Token${localStorage.getItem('auth_token')}`
+          }
+        })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data);
+            localStorage.clear();
+          });
+      };
 
     if (!open) return null
     return ReactDOM.createPortal(
@@ -71,6 +89,7 @@ export default function Login({ open, children, onClose }) {
                         onChange={e => setPassword(e.target.value)}></input>
                 </div>
                 <button className='formButton' type='submit' value='Login'>Connection</button>
+                <button className='formButton' onClick={logOut}> Déconnection </button>
                 <button className='formButton' onClick={onClose}> fermer </button>
             </form>
 

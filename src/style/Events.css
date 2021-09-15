@@ -24,13 +24,13 @@ button, select {
   text-transform: none;
 }
 
-button, input, select, textarea {
+button, input, select, textarea, label {
   color: #5A5A5A;
   font: inherit;
   margin: 0;
 }
 
-input {
+input, label {
   line-height: normal;
 }
 
@@ -84,7 +84,7 @@ h1 {
 	width: 45%;
 }
 
-input[type='text'], [type='email'], select, textarea {
+input[type='text'], [type='email'], [type='date'], select, textarea, label {
 	background: none;
   border: none;
 	border-bottom: solid 2px #474544;
@@ -188,6 +188,10 @@ textarea {
 #form_button:hover {
   background: #474544;
   color: #F2F3EB;
+}
+
+.date{
+  text-align: left !important;
 }
 
 @media screen and (max-width: 768px) {

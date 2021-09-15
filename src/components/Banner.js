@@ -15,7 +15,7 @@ function Banner() {
     return (
         <div className='banner' style={{backgroundImage : `url(${banner})`}}>
             <p className='user' onClick={() => setIsOpen(true)} >{user}</p>
-            <Login open={isOpen} onClose={() => setIsOpen(false)}>
+            <Login open={isOpen} onClose={() => setIsOpen(false) }>
             </Login>
         </div>
     )

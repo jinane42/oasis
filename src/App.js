@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Banner from './components/Banner'
 import Navbar from './components/Navbar';
 import Footer from './components/Footer'
@@ -16,6 +16,12 @@ function App() {
 
   const [event, setEvent] = useState([])
   const [isAuth, setIsAuth] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.getItem('auth_token') !== null) {
+        setIsAuth(true);
+    }
+}, []);
 
   return (
     <div className="App">
