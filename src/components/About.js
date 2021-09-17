@@ -1,68 +1,87 @@
 import '../style/About.css'
 import index from './img/index.jpeg'
+import { Link } from 'react-router-dom'
+import chantier1 from './img/chantier1.jpg'
+import chantier2 from './img/chantier2.jpg'
+import tournesol from './img/tournesol.jpg'
+import fleur from './img/Fleur-Perma.jpg'
+import logo from './img/logo.png'
+
 function About() {
 
+
+
     return (
-        <div class="band">
-            <div class="item-1">
-                <a href="" class="card">
-                    <div class="thumb" >
+        <div className="band">
+            <div className="card"   >
+                <Link to='/Qui-sommes-nous'>
+                <div className="thumb" >
                         <img className='image' src={index}></img>
-                    </div>
-                    <article>
-                        <h1>Qui sommes-nous ? </h1>
-                    </article>
-                </a>
+                        <article>
+                            <h1>Qui sommes-nous ? </h1>
+                        </article>
+                </div>
+                </Link>
             </div>
-            <div class="item-2">
-                <a href="" class="card">
-                    <div class="thumb" >
-                    <img className='image' src={index}></img>
+            <div className="card2">
+                <Link to='/Valeurs'>
+                    <div className="thumb" >
+                        <img className='image' src={tournesol}></img>
                     </div>
                     <article>
                         <h1>Les valeurs de l'Oasis du vert Marais</h1>
                     </article>
-                </a>
+                </Link>
             </div>
-            <div class="item-3">
-                <a href="" class="card">
-                    <div class="thumb" ></div>
+            <div className="card3">
+                <Link to='/Actions'>
+                    <div className="thumb" >
+                        <img className='image' src={chantier1}></img>
+                    </div>
                     <article>
-                        <h1>Created by You, July Edition</h1>
+                        <h1>Nos actions principales</h1>
                     </article>
-                </a>
+                </Link>
             </div>
-            <div class="item-4">
-                <a href="" class="card">
-                    <div class="thumb" ></div>
+            <div className="card3">
+                <Link to='/Valeurs'>
+                    <div className="thumb" >
+                        <img className='image' src={chantier2}></img>
+                    </div>
                     <article>
-                        <h1>How to Code a Scrolling “Alien Lander” Website</h1>
+                        <h1>A venir</h1>
                     </article>
-                </a>
+                </Link>
             </div>
-            <div class="item-5">
-                <a href="" class="card">
-                    <div class="thumb" ></div>
+            <div className="card4">
+                <Link to='/Fondements'>
+                    <div className="thumb" >
+                        <img className='image' src={fleur}></img>
+                    </div>
                     <article>
-                        <h1>How to Create a “Stranger Things” Text Effect in Adobe Photoshop</h1>
+                        <h1>Un fondement</h1>
                     </article>
-                </a>
+                </Link>
             </div>
-            <div class="item-6">
-                <a href="" class="card">
-                    <div class="thumb" ></div>
+            <div className="card2">
+                <Link to='/Valeurs'>
+                    <div className="thumb" >
+                        <img className='image' src={chantier2}></img>
+                    </div>
                     <article>
-                        <h1>5 Inspirational Business Portraits and How to Make Your Own</h1>
+                        <h1>A venir</h1>
                     </article>
-                </a>
+                </Link>
             </div>
-            <div class="item-7">
-                <a href="" class="card">
-                    <div class="thumb" ></div>
+            <div className="card">
+                <Link to='/Valeurs'>
+                    <div className="thumb" >
+                        <img className='image' src={logo}></img>
+                    </div>
                     <article>
-                        <h1>Notes From Behind the Firewall: The State of Web Design in China</h1>
+                        <h1>A venir</h1>
                     </article>
-                </a>
+                </Link>
             </div>
         </div>
     )

@@ -10,19 +10,19 @@ function Events({ event, setEvent}) {
             <h3>Pour t'inscrire rempli le formulaire ci-dessous en sélectionant le chantier auquel tu veux participer.</h3>
 
             <form action="#" method="post" id="contact_form">
-                <div class="name">
+                <div className="name">
                     <label for="name"></label>
                     <input type="text" placeholder="Mon nom" name="name" id="name_input" required></input>
                 </div>
-                <div class="email">
+                <div className="email">
                     <label for="email"></label>
                     <input type="email" placeholder="Mon adresse e-mail" name="email" id="email_input" required></input>
                 </div>
-                <div class="telephone">
+                <div className="telephone">
                     <label for="name"></label>
                     <input type="text" placeholder="Mon numéro" name="telephone" id="telephone_input" required></input>
                 </div>
-                <div class="subject">
+                <div className="subject">
                     <label for="subject"></label>
                     <select placeholder="Je souhaite participer à l'évènement suivant:" name="subject" id="subject_input" required>
                         <option disabled hidden selected>Je souhaite participer à l'évènement suivant:</option>
@@ -31,7 +31,7 @@ function Events({ event, setEvent}) {
                         <option>I'd like to make a proposal</option>
                     </select>
                 </div>
-                <div class="people">
+                <div className="people">
                     <label for="people"></label>
                     <select placeholder="Nombre de personnes:" name="people" id="people_input" required>
                         <option disabled hidden selected>Nombre de personnes:</option>
@@ -42,11 +42,11 @@ function Events({ event, setEvent}) {
                         <option>5</option>
                     </select>
                 </div>
-                <div class="message">
+                <div className="message">
                     <label for="message"></label>
                     <textarea name="message" placeholder="Une question ou un petit mot ? " id="message_input" cols="30" rows="5" required></textarea>
                 </div>
-                <div class="submit">
+                <div className="submit">
                     <input type="submit" value="Je participe !" id="form_button" ></input>
                 </div>
             </form>
